@@ -393,6 +393,30 @@ const scenarios = [
     parentSidebarItemTestId: "link-for-sidebar-item-config",
     sidebarItemTestId: "link-for-sidebar-item-validating-admission-policy-bindings",
   },
+
+  {
+    expectedSelector: "h5.title",
+    parentSidebarItemTestId: "link-for-sidebar-item-device-resources",
+    sidebarItemTestId: "link-for-sidebar-item-resource-claims",
+  },
+
+  {
+    expectedSelector: "h5.title",
+    parentSidebarItemTestId: "link-for-sidebar-item-device-resources",
+    sidebarItemTestId: "link-for-sidebar-item-resource-claim-templates",
+  },
+
+  {
+    expectedSelector: "h5.title",
+    parentSidebarItemTestId: "link-for-sidebar-item-device-resources",
+    sidebarItemTestId: "link-for-sidebar-item-device-classes",
+  },
+
+  {
+    expectedSelector: "h5.title",
+    parentSidebarItemTestId: "link-for-sidebar-item-device-resources",
+    sidebarItemTestId: "link-for-sidebar-item-resource-slices",
+  },
 ];
 
 const navigateToPods = async (frame: Frame) => {

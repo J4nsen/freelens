@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DeviceClassDetails > renders 1`] = `
+<body>
+  <div>
+    <div
+      class="DeviceClassDetails"
+    >
+      <div
+        class="DrawerItem"
+      >
+        <span
+          class="name"
+        >
+          Extended Resource Name
+        </span>
+        <span
+          class="value"
+        >
+          example.com/gpu
+        </span>
+      </div>
+      <div
+        class="DrawerTitle title"
+      >
+        Selectors
+      </div>
+      <div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Expression
+          </span>
+          <span
+            class="value"
+          >
+            device.driver == "gpu.example.com"
+          </span>
+        </div>
+      </div>
+      <div
+        class="DrawerTitle title"
+      >
+        Config
+      </div>
+      <div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Driver
+          </span>
+          <span
+            class="value"
+          >
+            gpu.example.com
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Parameters
+          </span>
+          <span
+            class="value"
+          >
+            <div>
+              sharingStrategy: TimeSlicing
+            </div>
+            <div>
+              replicas: 4
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`DeviceClassDetails > renders with an empty spec 1`] = `
+<body>
+  <div>
+    <div
+      class="DeviceClassDetails"
+    />
+  </div>
+</body>
+`;

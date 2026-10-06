@@ -33,6 +33,11 @@ import { registerInjectables as registerCountdownInjectables } from "./countdown
 import { registerInjectables as registerCustomResourceDefinitionsInjectables } from "./custom-resource-definitions/register-injectables";
 import { registerInjectables as registerCustomResourcesInjectables } from "./custom-resources/register-injectables";
 import { registerInjectables as registerDeleteClusterDialogInjectables } from "./delete-cluster-dialog/register-injectables";
+import { registerInjectables as registerDeviceResourcesInjectables } from "./device-resources/register-injectables";
+import { registerInjectables as registerDeviceResourcesDeviceClassesInjectables } from "./device-resources-device-classes/register-injectables";
+import { registerInjectables as registerDeviceResourcesResourceClaimTemplatesInjectables } from "./device-resources-resource-claim-templates/register-injectables";
+import { registerInjectables as registerDeviceResourcesResourceClaimsInjectables } from "./device-resources-resource-claims/register-injectables";
+import { registerInjectables as registerDeviceResourcesResourceSlicesInjectables } from "./device-resources-resource-slices/register-injectables";
 import { registerInjectables as registerDockInjectables } from "./dock/register-injectables";
 import { registerInjectables as registerDrawerInjectables } from "./drawer/register-injectables";
 import { registerInjectables as registerEntitySettingsInjectables } from "./entity-settings/register-injectables";
@@ -216,6 +221,31 @@ export function registerInjectables(di: DiContainerForInjection): void {
   }
   try {
     registerDeleteClusterDialogInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesDeviceClassesInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesResourceClaimTemplatesInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesResourceClaimsInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesResourceSlicesInjectables(di);
   } catch (e) {
     /* Ignore duplicate registration */
   }

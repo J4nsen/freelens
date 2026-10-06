@@ -51,6 +51,10 @@ export const ResourceNames: Record<KubeResource, string> = {
   validatingadmissionpolicies: "Validating Admission Policies",
   validatingadmissionpolicybindings: "Validating Admission Policy Bindings",
   validatingwebhookconfigurations: "Validating Webhook Configurations",
+  deviceclasses: "Device Classes",
+  resourceclaims: "Resource Claims",
+  resourceclaimtemplates: "Resource Claim Templates",
+  resourceslices: "Resource Slices",
 };
 
 export const ResourceKindMap = object.fromEntries(
