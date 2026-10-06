@@ -1,0 +1,193 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ResourceClaimTemplateDetails > renders 1`] = `
+<body>
+  <div>
+    <div
+      class="ResourceClaimTemplateDetails"
+    >
+      <div
+        class="DrawerTitle title"
+      >
+        Template Metadata
+      </div>
+      <div
+        class="DrawerItem labelsOnly"
+      >
+        <span
+          class="name"
+        >
+          Labels
+        </span>
+        <span
+          class="value"
+        >
+          <div
+            class="badge"
+            title="app=gpu-workload"
+          >
+            app=gpu-workload
+          </div>
+        </span>
+      </div>
+      <div
+        class="DrawerItem labelsOnly"
+      >
+        <span
+          class="name"
+        >
+          Annotations
+        </span>
+        <span
+          class="value"
+        >
+          <div
+            class="badge"
+            title="example.com/owner=platform"
+          >
+            example.com/owner=platform
+          </div>
+        </span>
+      </div>
+      <div
+        class="DrawerTitle title"
+      >
+        Device Requests
+      </div>
+      <div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Name
+          </span>
+          <span
+            class="value"
+          >
+            gpu
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Device Class
+          </span>
+          <span
+            class="value"
+          >
+            gpu.example.com
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Allocation Mode
+          </span>
+          <span
+            class="value"
+          >
+            ExactCount
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Count
+          </span>
+          <span
+            class="value"
+          >
+            1
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Selectors
+          </span>
+          <span
+            class="value"
+          >
+            <div>
+              device.attributes['gpu.example.com'].model == 'a100'
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        class="DrawerTitle title"
+      >
+        Config
+      </div>
+      <div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Requests
+          </span>
+          <span
+            class="value"
+          >
+            gpu
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Driver
+          </span>
+          <span
+            class="value"
+          >
+            gpu.example.com
+          </span>
+        </div>
+        <div
+          class="DrawerItem"
+        >
+          <span
+            class="name"
+          >
+            Parameters
+          </span>
+          <span
+            class="value"
+          >
+            {"sharing":"timeSlicing"}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ResourceClaimTemplateDetails > renders with no devices 1`] = `
+<body>
+  <div>
+    <div
+      class="ResourceClaimTemplateDetails"
+    />
+  </div>
+</body>
+`;

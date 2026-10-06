@@ -13,6 +13,7 @@ import cronJobDetailItemInjectable from "./cron-job-detail-item.injectable";
 import customResourceDefinitionsDetailItemInjectable from "./custom-resource-definitions-detail-item.injectable";
 import daemonSetDetailItemInjectable from "./daemon-set-detail-item.injectable";
 import deploymentDetailItemInjectable from "./deployment-detail-item.injectable";
+import deviceClassDetailItemInjectable from "./device-class-detail-item.injectable";
 import endpointSliceDetailItemInjectable from "./endpoint-slice-detail-item.injectable";
 import endpointsDetailItemInjectable from "./endpoints-detail-item.injectable";
 import eventsDetailItemInjectable from "./events-detail-item.injectable";
@@ -35,7 +36,10 @@ import podSecurityPolicyDetailItemInjectable from "./pod-security-policy-detail-
 import priorityClassDetailItemInjectable from "./priority-class-detail-item.injectable";
 import replicaSetDetailItemInjectable from "./replica-set-detail-item.injectable";
 import replicationControllerDetailItemInjectable from "./replication-controller-detail-item.injectable";
+import resourceClaimDetailItemInjectable from "./resource-claim-detail-item.injectable";
+import resourceClaimTemplateDetailItemInjectable from "./resource-claim-template-detail-item.injectable";
 import resourceQuotaDetailItemInjectable from "./resource-quota-detail-item.injectable";
+import resourceSliceDetailItemInjectable from "./resource-slice-detail-item.injectable";
 import roleBindingDetailItemInjectable from "./role-binding-detail-item.injectable";
 import roleDetailItemInjectable from "./role-detail-item.injectable";
 import runtimeClassDetailItemInjectable from "./runtime-class-detail-item.injectable";
@@ -84,6 +88,11 @@ export function registerInjectables(di: DiContainerForInjection): void {
   }
   try {
     di.register(deploymentDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(deviceClassDetailItemInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
   }
@@ -198,7 +207,22 @@ export function registerInjectables(di: DiContainerForInjection): void {
     /* Ignore duplicate registration */
   }
   try {
+    di.register(resourceClaimDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(resourceClaimTemplateDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
     di.register(resourceQuotaDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(resourceSliceDetailItemInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
   }

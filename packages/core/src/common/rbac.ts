@@ -45,7 +45,11 @@ export type KubeResource =
   | "mutatingwebhookconfigurations"
   | "validatingadmissionpolicies"
   | "validatingadmissionpolicybindings"
-  | "validatingwebhookconfigurations";
+  | "validatingwebhookconfigurations"
+  | "deviceclasses"
+  | "resourceclaims"
+  | "resourceclaimtemplates"
+  | "resourceslices";
 
 export interface KubeApiResource {
   kind: string;
@@ -103,6 +107,11 @@ export const apiResourceRecord: Record<KubeResource, KubeApiResourceData> = {
     kind: "Deployment",
     group: "apps",
     namespaced: true,
+  },
+  deviceclasses: {
+    kind: "DeviceClass",
+    group: "resource.k8s.io",
+    namespaced: false,
   },
   endpoints: {
     kind: "Endpoint",
@@ -219,10 +228,25 @@ export const apiResourceRecord: Record<KubeResource, KubeApiResourceData> = {
     group: "node.k8s.io",
     namespaced: false,
   },
+  resourceclaims: {
+    kind: "ResourceClaim",
+    group: "resource.k8s.io",
+    namespaced: true,
+  },
+  resourceclaimtemplates: {
+    kind: "ResourceClaimTemplate",
+    group: "resource.k8s.io",
+    namespaced: true,
+  },
   resourcequotas: {
     kind: "ResourceQuota",
     group: "",
     namespaced: true,
+  },
+  resourceslices: {
+    kind: "ResourceSlice",
+    group: "resource.k8s.io",
+    namespaced: false,
   },
   replicasets: {
     kind: "ReplicaSet",

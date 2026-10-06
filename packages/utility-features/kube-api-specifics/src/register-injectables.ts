@@ -15,6 +15,7 @@ import { cronJobApiInjectable } from "./specifics/cron-job.api.injectable";
 import { customResourceDefinitionApiInjectable } from "./specifics/custom-resource-definition.api.injectable";
 import { daemonSetApiInjectable } from "./specifics/daemon-set.api.injectable";
 import { deploymentApiInjectable } from "./specifics/deployment.api.injectable";
+import { deviceClassApiInjectable } from "./specifics/device-class-api.injectable";
 import { endpointsApiInjectable } from "./specifics/endpoint.api.injectable";
 import { endpointSliceApiInjectable } from "./specifics/endpoint-slice.api.injectable";
 import { kubeEventApiInjectable } from "./specifics/event.api.injectable";
@@ -39,7 +40,10 @@ import { podSecurityPolicyApiInjectable } from "./specifics/pod-security-policy.
 import { priorityClassApiInjectable } from "./specifics/priority-class.api.injectable";
 import { replicaSetApiInjectable } from "./specifics/replica-set.api.injectable";
 import { replicationControllerApiInjectable } from "./specifics/replication-controller.api.injectable";
+import { resourceClaimApiInjectable } from "./specifics/resource-claim-api.injectable";
+import { resourceClaimTemplateApiInjectable } from "./specifics/resource-claim-template-api.injectable";
 import { resourceQuotaApiInjectable } from "./specifics/resource-quota.api.injectable";
+import { resourceSliceApiInjectable } from "./specifics/resource-slice-api.injectable";
 import { roleApiInjectable } from "./specifics/role.api.injectable";
 import { roleBindingApiInjectable } from "./specifics/role-binding.api.injectable";
 import { runtimeClassApiInjectable } from "./specifics/runtime-class.api.injectable";
@@ -99,6 +103,11 @@ export function registerInjectables(di: DiContainerForInjection): void {
   }
   try {
     di.register(deploymentApiInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(deviceClassApiInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
   }
@@ -223,7 +232,22 @@ export function registerInjectables(di: DiContainerForInjection): void {
     /* Ignore duplicate registration */
   }
   try {
+    di.register(resourceClaimApiInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(resourceClaimTemplateApiInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
     di.register(resourceQuotaApiInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(resourceSliceApiInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
   }

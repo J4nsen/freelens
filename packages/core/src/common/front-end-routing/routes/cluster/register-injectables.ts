@@ -8,6 +8,7 @@
 
 import { registerInjectables as registerConfigInjectables } from "./config/register-injectables";
 import { registerInjectables as registerCustomResourcesInjectables } from "./custom-resources/register-injectables";
+import { registerInjectables as registerDeviceResourcesInjectables } from "./device-resources/register-injectables";
 import { registerInjectables as registerEventsInjectables } from "./events/register-injectables";
 import { registerInjectables as registerFavoritesInjectables } from "./favorites/register-injectables";
 import { registerInjectables as registerHelmInjectables } from "./helm/register-injectables";
@@ -29,6 +30,11 @@ export function registerInjectables(di: DiContainerForInjection): void {
   }
   try {
     registerCustomResourcesInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerDeviceResourcesInjectables(di);
   } catch (e) {
     /* Ignore duplicate registration */
   }

@@ -1,0 +1,12 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.DeviceClasses {
+  .TableCell {
+    &.age {
+      flex: 0.3;
+    }
+  }
+}
